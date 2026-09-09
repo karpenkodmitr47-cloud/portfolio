@@ -69,3 +69,19 @@ test('JavaScript includes all progressive enhancement initializers', async () =>
   assert.match(js, /IntersectionObserver/);
   assert.match(js, /showModal\(/);
 });
+
+test('site includes deployment-ready metadata and documentation', async () => {
+  const [html, readme] = await Promise.all([read('index.html'), read('README.md')]);
+  assert.match(html, /<meta name="description"/);
+  assert.match(html, /<meta name="theme-color" content="#07070A"/i);
+  assert.match(html, /property="og:title"/);
+  assert.match(readme, /GitHub Pages/);
+  assert.match(readme, /python -m http\.server 8000/);
+});
+
+test('reveal content stays visible when JavaScript is unavailable', async () => {
+  const [html, css] = await Promise.all([read('index.html'), read('styles.css')]);
+  assert.match(html, /document\.documentElement\.classList\.add\('js'\)/);
+  assert.match(css, /\.js \[data-reveal\]/);
+  assert.match(css, /\[data-reveal\]\s*\{[^}]*opacity:\s*1/s);
+});
