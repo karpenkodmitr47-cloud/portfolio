@@ -75,6 +75,7 @@ test('site includes deployment-ready metadata and documentation', async () => {
   assert.match(html, /<meta name="description"/);
   assert.match(html, /<meta name="theme-color" content="#07070A"/i);
   assert.match(html, /property="og:title"/);
+  assert.match(html, /rel="icon"[^>]*data:image\/svg\+xml/);
   assert.match(readme, /GitHub Pages/);
   assert.match(readme, /python -m http\.server 8000/);
 });
