@@ -28,3 +28,21 @@ test('interactive controls have accessible hooks', async () => {
   assert.match(html, /<dialog[^>]*id="project-dialog"[^>]*aria-labelledby=/);
   assert.match(html, /href="mailto:/);
 });
+
+test('CSS defines the approved visual tokens and responsive ranges', async () => {
+  const css = await read('styles.css');
+  for (const value of ['#07070a', '#f4f7ff', '#9295a5', '#42f5e6', '#9b5cff']) {
+    assert.ok(css.toLowerCase().includes(value));
+  }
+  for (const width of ['600px', '960px', '1440px']) {
+    assert.ok(css.includes(width));
+  }
+});
+
+test('CSS provides accessibility and motion fallbacks', async () => {
+  const css = await read('styles.css');
+  assert.match(css, /:focus-visible/);
+  assert.match(css, /prefers-reduced-motion:\s*reduce/);
+  assert.match(css, /pointer:\s*coarse/);
+  assert.match(css, /scrollbar-color|::-webkit-scrollbar/);
+});
