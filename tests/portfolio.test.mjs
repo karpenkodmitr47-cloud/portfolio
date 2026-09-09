@@ -46,3 +46,26 @@ test('CSS provides accessibility and motion fallbacks', async () => {
   assert.match(css, /pointer:\s*coarse/);
   assert.match(css, /scrollbar-color|::-webkit-scrollbar/);
 });
+
+test('project matching treats all as a wildcard', async () => {
+  const { matchesCategory } = await import(new URL(`../script.js?case=${Date.now()}`, import.meta.url));
+  assert.equal(matchesCategory('data', 'all'), true);
+  assert.equal(matchesCategory('data', 'data'), true);
+  assert.equal(matchesCategory('data', 'interfaces'), false);
+});
+
+test('project lookup returns a matching project or null', async () => {
+  const { getProjectById } = await import(new URL(`../script.js?lookup=${Date.now()}`, import.meta.url));
+  const projects = [{ id: 'luma' }, { id: 'pulse' }];
+  assert.deepEqual(getProjectById(projects, 'pulse'), { id: 'pulse' });
+  assert.equal(getProjectById(projects, 'missing'), null);
+});
+
+test('JavaScript includes all progressive enhancement initializers', async () => {
+  const js = await read('script.js');
+  for (const name of ['setupFilters', 'setupDialog', 'setupMenu', 'setupReveal', 'setupSectionSpy', 'setupCursor', 'setupAmbientMotion']) {
+    assert.match(js, new RegExp(`function\\s+${name}\\b`));
+  }
+  assert.match(js, /IntersectionObserver/);
+  assert.match(js, /showModal\(/);
+});
