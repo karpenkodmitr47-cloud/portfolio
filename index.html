@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kirill Karpenko is a frontend developer and creative coder building expressive, high-performance digital experiences.">
+  <meta name="theme-color" content="#07070A">
+  <meta property="og:title" content="Kirill Karpenko — Frontend Developer & Creative Coder">
+  <meta property="og:description" content="Selected interfaces, experiments, and digital systems by Kirill Karpenko.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%2307070a'/%3E%3Cpath d='M17 15v34h7V35l13 14h10L31 31l15-16h-9L24 29V15z' fill='%2342f5e6'/%3E%3C/svg%3E">
+  <title>Kirill Karpenko — Frontend Developer & Creative Coder</title>
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="cursor" aria-hidden="true"><span></span></div>
+  <div class="page-grid" aria-hidden="true"></div>
+
+  <header class="site-header" data-header>
+    <a class="brand" href="#home" aria-label="Kirill Karpenko, home">KK<span>/26</span></a>
+    <p class="availability"><span aria-hidden="true"></span>Available for select projects</p>
+    <button id="menu-toggle" class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span>Menu</span><i aria-hidden="true"></i>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#skills">Stack</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="kicker" data-reveal>Frontend developer <span>/</span> Creative coder</p>
+        <h1 id="hero-title" data-reveal>I build interfaces<br>for the <span class="signal-word">next signal.</span></h1>
+        <div class="hero-bottom" data-reveal>
+          <p>I turn ambitious ideas into fast, expressive digital experiences where code, motion, and clear thinking meet.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#work"><span>Explore selected work</span><i aria-hidden="true">↘</i></a>
+            <a class="text-link" href="mailto:hello@kirillkarpenko.dev">Start a conversation</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="signal-orbit" aria-hidden="true" data-reveal>
+        <div class="orbit-ring orbit-ring-a"></div>
+        <div class="orbit-ring orbit-ring-b"></div>
+        <div class="orbit-ring orbit-ring-c"></div>
+        <div class="orbit-core"><span>KK</span></div>
+        <div class="orbit-node node-a"><span>UI</span></div>
+        <div class="orbit-node node-b"><span>JS</span></div>
+        <div class="orbit-node node-c"><span>GL</span></div>
+        <div class="orbit-readout readout-a">lat 59.93°</div>
+        <div class="orbit-readout readout-b">signal 98.4%</div>
+      </div>
+
+      <div class="hero-index" aria-hidden="true">
+        <span>001</span><span>Signal grid / Saint Petersburg</span>
+      </div>
+    </section>
+
+    <section id="about" class="section about" aria-labelledby="about-title">
+      <div class="section-rail" data-reveal><span>Profile</span><span>01</span></div>
+      <div class="about-content">
+        <h2 id="about-title" data-reveal>Engineering discipline.<br>Creative instinct.</h2>
+        <div class="about-copy" data-reveal>
+          <p class="about-lead">I’m Kirill, a frontend developer focused on the space between precise systems and memorable digital expression.</p>
+          <p>My work begins with structure: readable code, accessible patterns, and performance that holds up. Then I add the details that make an interface feel alive—rhythm, motion, typography, and interaction with a point of view.</p>
+        </div>
+        <div class="metrics" aria-label="Working principles" data-reveal>
+          <article><strong>01</strong><span>Idea shaped into a clear system</span></article>
+          <article><strong>60</strong><span>Frames per second as the motion baseline</span></article>
+          <article><strong>AA</strong><span>Accessibility built into the interface</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="section work" aria-labelledby="work-title">
+      <div class="section-rail" data-reveal><span>Selected work</span><span>02</span></div>
+      <div class="work-heading">
+        <h2 id="work-title" data-reveal>Recent signals</h2>
+        <div class="project-filters" role="group" aria-label="Filter projects" data-reveal>
+          <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All <span>06</span></button>
+          <button class="filter-button" type="button" data-filter="interfaces" aria-pressed="false">Interfaces</button>
+          <button class="filter-button" type="button" data-filter="data" aria-pressed="false">Data</button>
+          <button class="filter-button" type="button" data-filter="experiments" aria-pressed="false">Experiments</button>
+        </div>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card project-card-wide" data-category="interfaces" data-reveal>
+          <button class="project-open" type="button" data-project="luma" aria-label="View Luma Commerce project details">
+            <span class="project-visual visual-luma" aria-hidden="true">
+              <span class="luma-sphere"></span><span class="luma-panel"></span><span class="visual-code">LC / 01</span>
+            </span>
+            <span class="project-info">
+              <span class="project-number">01</span><span class="project-title">Luma Commerce</span><span class="project-type">Immersive commerce</span><span class="project-year">2026</span>
+            </span>
+          </button>
+        </article>
+
+        <article class="project-card" data-category="data" data-reveal>
+          <button class="project-open" type="button" data-project="pulse" aria-label="View Pulse Atlas project details">
+            <span class="project-visual visual-pulse" aria-hidden="true">
+              <svg viewBox="0 0 600 500" role="presentation"><path d="M38 350C122 201 161 404 245 245S396 88 562 182"/><path d="M38 390C134 270 174 447 294 302S450 211 562 110"/><circle cx="294" cy="302" r="9"/></svg>
+              <span class="visual-code">PA / LIVE</span>
+            </span>
+            <span class="project-info">
+              <span class="project-number">02</span><span class="project-title">Pulse Atlas</span><span class="project-type">Data visualization</span><span class="project-year">2026</span>
+            </span>
+          </button>
+        </article>
+
+        <article class="project-card" data-category="interfaces" data-reveal>
+          <button class="project-open" type="button" data-project="synapse" aria-label="View Synapse Studio project details">
+            <span class="project-visual visual-synapse" aria-hidden="true">
+              <span class="synapse-window"><i></i><i></i><i></i><b></b></span><span class="visual-code">SS / AI</span>
+            </span>
+            <span class="project-info">
+              <span class="project-number">03</span><span class="project-title">Synapse Studio</span><span class="project-type">AI interface</span><span class="project-year">2025</span>
+            </span>
+          </button>
+        </article>
+
+        <article class="project-card project-card-wide" data-category="interfaces" data-reveal>
+          <button class="project-open" type="button" data-project="offset" aria-label="View Offset Journal project details">
+            <span class="project-visual visual-offset" aria-hidden="true">
+              <span class="offset-type">OFF<br>SET</span><span class="offset-copy">An independent journal for culture moving sideways.</span><span class="visual-code">OJ / 04</span>
+            </span>
+            <span class="project-info">
+              <span class="project-number">04</span><span class="project-title">Offset Journal</span><span class="project-type">Digital editorial</span><span class="project-year">2025</span>
+            </span>
+          </button>
+        </article>
+
+        <article class="project-card" data-category="experiments" data-reveal>
+          <button class="project-open" type="button" data-project="orbit" aria-label="View Orbit Rooms project details">
+            <span class="project-visual visual-orbit" aria-hidden="true">
+              <span class="room room-a"></span><span class="room room-b"></span><span class="room room-c"></span><span class="visual-code">OR / 3D</span>
+            </span>
+            <span class="project-info">
+              <span class="project-number">05</span><span class="project-title">Orbit Rooms</span><span class="project-type">Spatial web</span><span class="project-year">2025</span>
+            </span>
+          </button>
+        </article>
+
+        <article class="project-card" data-category="experiments" data-reveal>
+          <button class="project-open" type="button" data-project="shader" aria-label="View Shader Kit project details">
+            <span class="project-visual visual-shader" aria-hidden="true">
+              <span class="shader-plane"></span><span class="shader-grid"></span><span class="visual-code">SK / GLSL</span>
+            </span>
+            <span class="project-info">
+              <span class="project-number">06</span><span class="project-title">Shader Kit</span><span class="project-type">Creative toolkit</span><span class="project-year">2024</span>
+            </span>
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section skills" aria-labelledby="skills-title">
+      <div class="section-rail" data-reveal><span>Capabilities</span><span>03</span></div>
+      <div class="skills-intro">
+        <h2 id="skills-title" data-reveal>A connected stack,<br>not a checklist.</h2>
+        <p data-reveal>Each layer informs the next. Design decisions respect the browser; technical decisions protect the experience.</p>
+      </div>
+      <div class="skill-map" data-reveal>
+        <svg class="skill-lines" viewBox="0 0 1000 620" preserveAspectRatio="none" aria-hidden="true"><path d="M190 130L500 310L820 128M500 310L218 500M500 310L810 500"/></svg>
+        <button class="skill-node skill-node-core" type="button" aria-describedby="skill-core-note"><span>Core</span><strong>Creative<br>frontend</strong><i>00</i></button>
+        <button class="skill-node skill-node-a" type="button" aria-describedby="skill-a-note"><span>Interface</span><strong>HTML · CSS<br>JavaScript</strong><i>01</i></button>
+        <button class="skill-node skill-node-b" type="button" aria-describedby="skill-b-note"><span>Expression</span><strong>Canvas · SVG<br>WebGL · Motion</strong><i>02</i></button>
+        <button class="skill-node skill-node-c" type="button" aria-describedby="skill-c-note"><span>Quality</span><strong>Performance<br>Accessibility</strong><i>03</i></button>
+        <button class="skill-node skill-node-d" type="button" aria-describedby="skill-d-note"><span>Systems</span><strong>Tokens · UI<br>Architecture</strong><i>04</i></button>
+        <p id="skill-core-note" class="skill-note">The point where engineering and visual thinking become one system.</p>
+        <p id="skill-a-note" class="skill-note">Semantic foundations, resilient layout, and interaction logic.</p>
+        <p id="skill-b-note" class="skill-note">Purposeful motion and graphics that give a product its own signature.</p>
+        <p id="skill-c-note" class="skill-note">Fast, inclusive experiences measured beyond the happy path.</p>
+        <p id="skill-d-note" class="skill-note">Reusable rules that keep products coherent as they grow.</p>
+      </div>
+    </section>
+
+    <section id="process" class="section process" aria-labelledby="process-title">
+      <div class="section-rail" data-reveal><span>Method</span><span>04</span></div>
+      <div class="process-heading">
+        <h2 id="process-title" data-reveal>From first pulse<br>to final frame.</h2>
+      </div>
+      <ol class="process-list">
+        <li data-reveal><span>01</span><h3>Discover</h3><p>Clarify the real problem, the audience, and the edge worth sharpening.</p></li>
+        <li data-reveal><span>02</span><h3>Direct</h3><p>Define a visual and interaction system before surface details multiply.</p></li>
+        <li data-reveal><span>03</span><h3>Develop</h3><p>Build the smallest resilient system, then add expression with intent.</p></li>
+        <li data-reveal><span>04</span><h3>Refine</h3><p>Test the edges, tune the motion, and remove everything that does not help.</p></li>
+      </ol>
+    </section>
+
+    <section id="contact" class="contact" aria-labelledby="contact-title">
+      <div class="contact-noise" aria-hidden="true"></div>
+      <p class="kicker" data-reveal>Open channel / 2026</p>
+      <h2 id="contact-title" data-reveal>Have a signal<br>worth amplifying?</h2>
+      <a class="contact-link" href="mailto:hello@kirillkarpenko.dev" data-reveal>
+        <span>Let’s make it real</span><i aria-hidden="true">↗</i>
+      </a>
+      <p class="contact-meta" data-reveal>Available for selected freelance work, collaborations, and conversations about the web.</p>
+    </section>
+  </main>
+
+  <dialog id="project-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-shell">
+      <button class="dialog-close" type="button" aria-label="Close project details"><span>Close</span><i aria-hidden="true">×</i></button>
+      <p class="dialog-index">Project file <span data-dialog-index>01</span></p>
+      <h2 id="dialog-title">Project title</h2>
+      <div class="dialog-meta"><span data-dialog-discipline>Discipline</span><span data-dialog-year>2026</span></div>
+      <p class="dialog-summary" data-dialog-summary>Project summary</p>
+      <ul class="dialog-stack" data-dialog-stack aria-label="Technologies"></ul>
+      <a class="button button-primary" href="mailto:hello@kirillkarpenko.dev?subject=Project%20enquiry"><span>Build something together</span><i aria-hidden="true">↗</i></a>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <a class="brand" href="#home" aria-label="Back to top">KK<span>/26</span></a>
+    <p>Frontend Developer &amp; Creative Coder</p>
+    <div class="footer-links">
+      <a href="#contact" aria-label="Ask Kirill for his GitHub profile">GitHub</a>
+      <a href="#contact" aria-label="Ask Kirill for his LinkedIn profile">LinkedIn</a>
+      <a href="mailto:hello@kirillkarpenko.dev">Email</a>
+    </div>
+    <p class="footer-status"><span aria-hidden="true"></span>System online · <span data-year>2026</span></p>
+  </footer>
+</body>
+</html>
